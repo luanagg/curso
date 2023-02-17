@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <title> HTML básico</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+            }
+        </style>
+        <h1>HTML básico</h1>
+        <p>
+            HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo.
+            Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. 
+            Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.</p>
+
+        <h2>Então, o que é HTML?</h2>
+        <p>
+            HTML não é uma linguagem de programação; é uma <em>linguagem de marcação de texto</em>, usada para definir a estrutura 
+            do seu conteúdo. HTML consiste de uma série de <a href=https://developer.mozilla.org/pt-BR/docs/Glossary/Element>elementos</a>,que você usa para delimitar ou 
+            agrupar diferentes partes do conteúdo para que ele apareça ou atue de determinada maneira. As <a href=https://developer.mozilla.org/pt-BR/docs/Glossary/Tag>tags</a> 
+            anexas podem transformar uma palavra ou imagem num hiperlink, pode colocar palavras em itálico, pode aumentar ou diminuir a fonte e assim por diante. 
+            Por exemplo, veja a seguinte linha de conteúdo:</p>
+
+        <div class="bloco"> 
+            <small>Meu gatinho é muito mal humorado</small>
+        </div>
+
+        <p>
+            Se quiséssemos que a linha permanecesse por si só, poderíamos especificar que é um parágrafo colocando-a em uma tag de parágrafo:</p>
+         
+        <div class="bloco">
+            <small>&lt;<span>p</span>&gt;Meu gatinho é muito mal humorado&lt;<span>/p</span>&gt;</small></span>
+        </div>
+
+        <h3>Anatomia de um elemento HTML</h3>
+
+        <p>Vamos explorar esse parágrafo mais profundamente.</p>
+
+        <div>
+        <img src="/Users/goncalves/Desktop/Projetos/img/img1.png">
+        </div>
+
+        <p>As principais partes de um elemento são:</p>
+
+        <ol>
+            <li>A <b>tag de abertura:</b> Consiste no nome do elemento (no caso, p), envolvido em parênteses angulares de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde seu efeito se inicia — nesse caso, onde é o começo do parágrafo</li>
+            <li>A <b>tag de fechamento:</b> Isso é a mesma coisa que a tag de abertura, exceto que inclui uma barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso, onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais comuns de iniciantes e pode levar a resultados estranhos.</li>
+            <li>O <b>conteúdo:</b> Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
+            <li>O <b>elemento:</b> A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
+        </ol>
+
+        <p>Elementos também podem ter atributos, que parecem assim:</p>
+
+        <div>
+        <img src="/Users/goncalves/Desktop/Projetos/img/img2.png">
+        </div>
+
+        <p>Atributos contém informação extra sobre o elemento que você não quer que apareça no conteúdo real. Aqui, <span><small>class</small></span>  é o nome do atributo e  <span><small>editor-note</small></span> é o valor do atributo. O atributo  class  permite que você forneça ao elemento um identificador que possa ser usado posteriormente para aplicar ao elemento informações de estilo e outras coisas.</p>
+
+        <p>Um atributo sempre deve ter:</p>
+
+        <ul>
+            <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, se o elemento já tiver um).</li>
+            <li>O nome do atributo, seguido por um sinal de igual.</li>
+            <li>Aspas de abertura e fechamento, envolvendo todo o valor do atributo.</li>
+        </ul>
+
+        <h3>Aninhando elementos</h3>
+
+        <p>
+            Você pode colocar elementos dentro de outros elementos também — isso é chamado de aninhamento. Se quiséssemos afirmar que nosso gato é muito mal-humorado, poderíamos envolver a palavra "muito" em um elemento <span><small>&lt;strong&gt;</small></span>, o que significa que a palavra deve ser fortemente enfatizada:</p>
+
+        <div class= "bloco-borda">
+            <span><small>&lt;p&gt;</span>Meu gatinho é&lt;<span style=color:green;">strong</span>&gt;muito&lt;<span style=color:green;">/strong</span>&gt;mal humorado<span>&lt;/p&gt;</small></span>
+        </div>
+
+        <p>
+            Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento <span><small>&lt;p&gt;</small></span>, depois o elemento <span><small>&lt;strong&gt;</small></span>; portanto, temos que fechar primeiro o elemento <span><small>&lt;strong&gt;</small></span>, depois o elemento <span><small>&lt;p&gt;</small></span>. <span class="texto-red"> O código abaixo está incorreto:</span></p>
+
+        <div class= "bloco-borda">
+            <small>&lt;<span>p</span>&gt;Meu gatinho é&lt;<span style=color:green;">strong</span>&gt;muito mal humorado&lt;<span>/p</span>&gt;<span style=color:green;">/strong</span>&gt;</small>
+        </div>
+
+        <p>
+            Os elementos precisam ser abertos e fechados corretamente para que eles estejam claramente visíveis dentro ou fora um do outro. Se eles se sobrepuserem conforme mostrado acima, seu navegador tentará adivinhar o que você estava tentando dizer, o que pode levar a resultados inesperados. Então não faça isso!</p>
+
+        <h3>Elementos vazios</h3>
+
+        <p>
+            Alguns elementos não possuem conteúdo e são chamados de elementos vazios. Considere o elemento <span><small>&lt;img&gt;</small></span> que temos na nossa página HTML:</p>
+
+        <div class="bloco-borda">
+        <small>&lt;<span style=color:green;>img</span><span style=color:red;"> src</span>="<span style=color:green;>imagens/firefox-icon.png</span>" <span style=color:red;">alt</span>="<span style=color:green;>Minha imagem de teste</span>"&gt;</small>
+        </div>
+
+        <p>Ele contém dois atributos, mas não há tag<span><small>&lt;img&gt;</small></span> de fechamento, e não há conteúdo interno. Isso acontece porque um elemento de imagem não envolve conteúdo para ter efeito em si mesmo. Sua proposta é incorporar uma imagem na página HTML no lugar que o código aparece.</p>
+
+        <h2>Referências de entidades: incluindo caracteres especiais no HTML</h2>
+
+        <p>
+            No HTML, os caracteres &lt;, &gt;,",' e o & são caracteres especiais. Eles fazem parte da própria sintaxe HTML; portanto, como você inclui um desses caracteres no seu texto? Por exemplo, se você realmente deseja usar um e comercial ou sinal de menor que, e não tenha ele interpretado como código.<br><br>
+
+        <p>
+            Temos que usar referências de caracteres — códigos especiais que representam caracteres e podem ser usados nessas circunstâncias. Cada referência de caractere é iniciada com um e comercial (&) e finalizada por um ponto e vírgula (;).</p> 
+        
+        <table border="1">
+            <tr>
+                <th>Caractere literal</th>
+                <th>Referência de caractere equivalente</th>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>&amp;lt;</td>
+            </tr>
+            <tr>
+                <td>></td>
+                <td>&amp;gt;</td>
+            </tr>
+            <tr>
+                <td>"</td>
+                <td>&amp;quot;</td>
+            </tr>
+            <tr>
+                <td>'</td>
+                <td>&amp;apos;</td>
+            </tr>
+            <tr>
+                <td>&</td>
+                <td>&amp;amp;</td>
+            </tr>
+
+        </table>
+        <div>
+        <p><small>Adaptação da página <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics"> HTML básico - Aprendendo desenvolvimento web | MDN</small></a></p>
+        </div>
+
+       
+
+
+    </body>
+</html>
